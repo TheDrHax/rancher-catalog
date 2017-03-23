@@ -1,0 +1,4 @@
+name: PeerVPN
+description: Interconnect your nodes even through NAT.
+version: v0.1
+category: Networking

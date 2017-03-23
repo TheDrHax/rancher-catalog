@@ -1,0 +1,23 @@
+.catalog:
+  name: "PeerVPN"
+  version: "v0.1"
+  description: "Interconnect your nodes even through NAT."
+  questions:
+    - variable: "VPN_KEY"
+      label: "Password"
+      description: "This password is used by all nodes to access the P2P VPN."
+      type: "string"
+      required: true
+    - variable: "VPN_NAME"
+      label: "Name of the network"
+      type: "string"
+      required: true
+    - variable: "VPN_PEERS"
+      label: "List of peers"
+      description: "A list of public peers used to build a P2P network. Use this format: HOST1 PORT HOST2 PORT. Default port value is 7000."
+      type: "string"
+      required: true
+
+  peervpn:
+    start_on_create: true
+
