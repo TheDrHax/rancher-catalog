@@ -3,7 +3,7 @@ services:
   peervpn:
     cap_add:
     - NET_ADMIN
-    image: thedrhax/rancher-peervpn
+    image: thedrhax/rancher-peervpn:v0.1
     environment:
       VPN_KEY: ${VPN_KEY}
       VPN_NAME: ${VPN_NAME}
