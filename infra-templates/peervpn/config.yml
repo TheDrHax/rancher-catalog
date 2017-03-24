@@ -2,3 +2,4 @@ name: PeerVPN
 description: Interconnect your nodes even through NAT.
 version: v0.1
 category: Networking
+projectURL: https://github.com/TheDrHax/rancher-peervpn
