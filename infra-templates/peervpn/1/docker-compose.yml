@@ -1,0 +1,23 @@
+version: '2'
+services:
+  peervpn:
+    cap_add:
+    - NET_ADMIN
+    image: thedrhax/rancher-peervpn:v0.2
+    environment:
+      VPN_KEY: ${VPN_KEY}
+      VPN_NAME: ${VPN_NAME}
+      VPN_PEERS: ${VPN_PEERS}
+      VPN_PORT: ${VPN_PORT}
+      VPN_INTERFACE: ${VPN_INTERFACE}
+    devices:
+    - /dev/net/tun:/dev/net/tun:rwm
+    stdin_open: true
+    network_mode: host
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label_ne: peervpn=false
+      io.rancher.scheduler.global: 'true'
