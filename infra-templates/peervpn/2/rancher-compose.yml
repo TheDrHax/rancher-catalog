@@ -1,6 +1,6 @@
 .catalog:
   name: "PeerVPN"
-  version: "v0.3"
+  version: "v0.3.1"
   description: "Interconnect your nodes even through NAT."
   questions:
     - variable: "VPN_KEY"
