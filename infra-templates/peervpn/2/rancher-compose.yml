@@ -14,7 +14,7 @@
       required: true
     - variable: "VPN_PEERS"
       label: "List of peers"
-      description: "A list of public peers used to build a P2P network. Use this format: HOST1 PORT HOST2 PORT."
+      description: "A list of public peers used to build a P2P network. Use this format: HOST1:PORT HOST2:PORT."
       type: "string"
       required: true
     - variable: "VPN_INTERFACE"
